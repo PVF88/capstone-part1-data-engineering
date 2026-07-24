@@ -15,3 +15,4 @@ SELECT App, Category, Type, Rating, Price FROM apps WHERE (Type = 'Paid' AND Pri
 
 -- Query 6: High Review-to-Install Ratio Analysis
 SELECT App, Category, Reviews, Installs, ROUND((Reviews * 1.0 / Installs), 4) as Engagement_Ratio FROM apps WHERE Installs > 10000 ORDER BY Engagement_Ratio DESC LIMIT 5;
+
